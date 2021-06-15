@@ -31,23 +31,11 @@ Also have a look at our Ansible Best Practices Deck:
 
 The time required to do the workshops strongly depends on multiple factors: the number of participants, how familiar those are with Linux in general and how much discussions are done in between.
 
-Having said that, the exercises themselves should take roughly 4-5 hours. The first section is slightly longer than the second one. The accompanying presentation itself adds another hour.
 
 ## Lab Diagram
 
 ![ansible rhel lab diagram](../../images/rhel_lab_diagram.png)
 
-## Section 1 - Command-line Ansible Exercises
-
-* [Exercise 1.1 - Check the Prerequisites](1.1-setup)
-* [Exercise 1.2 - Running Ad-hoc Commands](1.2-adhoc)
-* [Exercise 1.3 - Writing Your First Playbook](1.3-playbook)
-* [Exercise 1.4 - Using Variables](1.4-variables)
-* [Exercise 1.5 - Conditionals, Handlers and Loops](1.5-handlers)
-* [Exercise 1.6 - Templates](1.6-templates)
-* [Exercise 1.7 - Roles](1.7-role)
-
-## Section 2 - Ansible Automation Platform Exercises
 
 * [Exercise 2.1 - Introduction to Tower](2.1-intro)
 * [Exercise 2.2 - Inventories, credentials and ad hoc commands](2.2-cred)

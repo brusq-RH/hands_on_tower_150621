@@ -27,20 +27,6 @@ Jetez également un œil à notre plate-forme des meilleures pratiques Ansible:
 
 Le temps requis pour faire les ateliers dépend fortement de plusieurs facteurs: le nombre de participants, leur familiarité avec Linux en général et le nombre de discussions qui se font entre les deux.
 
-Cela dit, les exercices eux-mêmes devraient prendre environ 4 à 5 heures. La première section est légèrement plus longue que la seconde. La présentation qui l'accompagne ajoute une heure de plus.
-
-Si votre expérience est différente dans la planification de ces ateliers, veuillez nous en informer et créer un ticket.
-
-
-## Section 1 - Exercices sur le moteur Ansible
-
- - [Exercise 1.1 - Vérifiez les prérequis](1.1-setup/README.fr.md)
- - [Exercise 1.2 - Running Ad-hoc Commands](1.2-adhoc/README.fr.md)
- - [Exercise 1.3 - Writing Your First Playbook](1.3-playbook/README.fr.md)
- - [Exercise 1.4 - Using Variables](1.4-variables/README.fr.md)
- - [Exercise 1.5 - Conditionals, Handlers and Loops](1.5-handlers/README.fr.md)
- - [Exercise 1.6 - Templates](1.6-templates/README.fr.md)
- - [Exercise 1.7 - Roles](1.7-role/README.fr.md)
 
 ## Section 2 - Exercices sur Ansible Tower
 

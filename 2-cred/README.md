@@ -7,8 +7,9 @@
 
 * [Objective](#objective)
 * [Guide](#guide)
-* [Examine an Inventory](#examine-an-inventory)
-* [Examine Machine Credentials](#examine-machine-credentials)
+* [Create an Inventory](#create-an-inventory)
+* [Machine Credentials](machine-credentials)
+* [Configure Machine Credentials](#configure-machine-credentials)
 * [Run Ad Hoc Commands](#run-ad-hoc-commands)
 * [Challenge Lab: Ad Hoc Commands](#challenge-lab-ad-hoc-commands)
 

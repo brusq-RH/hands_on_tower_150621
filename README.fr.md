@@ -1,7 +1,7 @@
 # Atelier Ansible - Ansible pour Red Hat Enterprise Linux
 
 **Lisez ceci dans d'autres langues**:
-<br>![uk](images/uk.png) [English](README.md),![france](images/fr.png) [Française](README.fr.md)
+<br>![uk](/images/uk.png) [English](README.md),![france](/images/fr.png) [Française](README.fr.md)
 
 
 Ansible est un moteur d'automatisation informatique simple mais puissant pour le déploiement d'applications, la gestion de la configuration et l'orchestration que vous pouvez apprendre rapidement.
@@ -28,15 +28,18 @@ Jetez également un œil à notre plate-forme des meilleures pratiques Ansible:
 Le temps requis pour faire les ateliers dépend fortement de plusieurs facteurs: le nombre de participants, leur familiarité avec Linux en général et le nombre de discussions qui se font entre les deux.
 
 
-## Section 2 - Exercices sur Ansible Tower
+##  Exercices sur Ansible Tower
 
- - [Exercise 2.1 - Introduction to Tower](2.1-intro/README.fr.md)
- - [Exercise 2.2 - Inventories, credentials and ad hoc commands](2.2-cred/README.fr.md)
- - [Exercise 2.3 - Projects & job templates](2.3-projects/README.fr.md)
- - [Exercise 2.4 - Surveys](2.4-surveys/README.fr.md)
- - [Exercise 2.5 - Role based access control](2.5-rbac/README.fr.md)
- - [Exercise 2.6 - Workflows](2.6-workflows/README.fr.md)
- - [Exercise 2.7 - Wrap up](2.7-wrap/README.fr.md)
+
+![ansible rhel lab diagram](/images/rhel_lab_diagram.png)
+
+ - [Exercise 1 - Introduction to Tower](2.1-intro/README.fr.md)
+ - [Exercise 2 - Inventories, credentials and ad hoc commands](2.2-cred/README.fr.md)
+ - [Exercise 3 - Projects & job templates](2.3-projects/README.fr.md)
+ - [Exercise 4 - Surveys](2.4-surveys/README.fr.md)
+ - [Exercise 5 - Role based access control](2.5-rbac/README.fr.md)
+ - [Exercise 6 - Workflows](2.6-workflows/README.fr.md)
+ - [Exercise 7 - Wrap up](2.7-wrap/README.fr.md)
 
 ## Exercices supplémentaires
 

@@ -1,7 +1,7 @@
 # Ansible Workshop - Ansible for Red Hat Enterprise Linux
 
 **Read this in other languages**:
-<br>![uk](images/uk.png) [English](README.md),![france](images/fr.png) [Française](README.fr.md)
+<br>![uk](/images/uk.png) [English](README.md),![france](/images/fr.png) [Française](README.fr.md)
 
 
 Ansible is simple yet powerful IT automation for application deployment, configuration management, and orchestration that you can learn quickly. In the first section of this lab you will learn to use command-line Ansible for automation from the basics up to some more advanced concepts. The second section of this lab covers Ansible Automation Platform and provide the user an overview of what Ansible Tower is, how it works and what the benefit of it is.
@@ -34,16 +34,16 @@ The time required to do the workshops strongly depends on multiple factors: the 
 
 ## Lab Diagram
 
-![ansible rhel lab diagram](../../images/rhel_lab_diagram.png)
+![ansible rhel lab diagram](/images/rhel_lab_diagram.png)
 
 
-* [Exercise 2.1 - Introduction to Tower](2.1-intro)
-* [Exercise 2.2 - Inventories, credentials and ad hoc commands](2.2-cred)
-* [Exercise 2.3 - Projects & job templates](2.3-projects)
-* [Exercise 2.4 - Surveys](2.4-surveys)
-* [Exercise 2.5 - Role based access control](2.5-rbac)
-* [Exercise 2.6 - Workflows](2.6-workflows)
-* [Exercise 2.7 - Wrap up](2.7-wrap)
+* [Exercise 1 - Introduction to Tower](2.1-intro)
+* [Exercise 2 - Inventories, credentials and ad hoc commands](2.2-cred)
+* [Exercise 3 - Projects & job templates](2.3-projects)
+* [Exercise 4 - Surveys](2.4-surveys)
+* [Exercise 5 - Role based access control](2.5-rbac)
+* [Exercise 6 - Workflows](2.6-workflows)
+* [Exercise 7 - Wrap up](2.7-wrap)
 
 ## Supplemental Exercises
 

@@ -44,7 +44,7 @@ In this lab you work in a pre-configured lab environment. You will have access t
 
 The Ansible Tower provided in this lab is individually setup for you. Make sure to access the right machine whenever you work with it. Ansible Tower has already been installed and licensed for you, the web UI will be reachable over HTTP/HTTPS.
 
-The lab environments in this session have a <LABID> and are separated by numbered student<N> accounts. Follow the instructions given by the lab facilitators to receive the values for student<N> and <LABID>!
+The lab environments in this session have a `<LABID>` and are separated by numbered `student<N>` accounts. Follow the instructions given by the lab facilitators to receive the values for `student<N>` and `<LABID>`!
 
 On the lab landing page you’ll find the URLs you need to access complete with student number and lab ID already filled in.
 
@@ -62,7 +62,7 @@ Some hints to get you started:
 
 Your main points of contact with the lab is the Ansible Tower web UI and code-server, providing a VSCode-experience in your browser.
 
-Now open code-server using the link from the lab landing page or this link in your browser by replacing <N> by your student number and the <LABID>:
+Now open code-server using the link from the lab landing page or this link in your browser by replacing `<N>` by your student number and the `<LABID>`:
 
     https://student<N>-code.<LABID>.events.opentlc.com
 
@@ -81,7 +81,7 @@ Congrats, you now have a shell terminal on your Ansible Tower. From here you run
 ### Accessing Tower Dashboard
 
 The dashboard also displays real time data about the execution of tasks completed in playbooks.
-Let's have a first look at the Tower: Point your browser to the URL you were given, similar to https://student<N>.<LABID>.events.opentlc.com (replace <N> with your student number and <LABID> with the ID of this lab) and log in as admin. You can find the password again on the lab landing page.
+Let's have a first look at the Tower: Point your browser to the URL you were given, similar to https://student`<N>`.`<LABID>`.events.opentlc.com (replace `<N>` with your student number and `<LABID>` with the ID of this lab) and log in as admin. You can find the password again on the lab landing page.
 
 
 The web UI of Ansible Tower greets you with a dashboard with a graph showing:

@@ -53,11 +53,10 @@ Ansible Tower has already been installed and licensed for you, the web UI will b
 ###  Working the Lab
 Some hints to get you started:
 
-Don’t type everything manually, use copy & paste from the browser when appropriate. But don’t stop to think and understand… ;-)
+* Don’t type everything manually, use copy & paste from the browser when appropriate. But don’t stop to think and understand… ;-)
 
-To edit files or open a terminal window, we provide code-server, basically the great VSCode Editor running in your browser. It’s running on the Tower node and can be accessed through the URL
+* To edit files or open a terminal window, we provide code-server, basically the great VSCode Editor running in your browser. It’s running on the Tower node and can be accessed through the URL  `https://student<N>-code.<LABID>.events.opentlc.com`
 
-  `https://student<N>-code.<LABID>.events.opentlc.com`
 
 ### Accessing your Lab Environment
 
@@ -67,11 +66,11 @@ Now open code-server using the link from the lab landing page or this link in yo
 
     `https://student<N>-code.<LABID>.events.opentlc.com`
 
-![VS code PWD](images/vscode_pwd.png)
+![VS code PWD](images/vscode-pwd.png)
 
 Use the password provided on the lab landing page to login into the code-server web UI, you can close the Welcome tab. Now open a new terminal by heading to the menu item Terminal at the top of the page and select New Terminal. A new section will appear in the lower half of the screen and you will be greeted with a prompt:
 
-![VS code terminal](images/vscode_terminal.png)
+![VS code terminal](images/vscode-terminal.png)
 
 
 Read the Visual Studio Code Server introduction, to learn more about how to create and edit files, and to work with the Terminal.

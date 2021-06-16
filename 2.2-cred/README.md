@@ -1,7 +1,7 @@
 # Workshop Exercise - Inventories, credentials and ad hoc commands
 
 **Read this in other languages**:
-<br>![uk](../../../images/uk.png) [English](README.md),![japan](../../../images/japan.png)[日本語](README.ja.md),![france](../../../images/fr.png) [Française](README.fr.md),![Español](../../../images/col.png) [Español](README.es.md).
+<br>![uk](../../../images/uk.png) [English](README.md),![france](../../../images/fr.png) [Française](README.fr.md)
 
 ## Table of Contents
 
@@ -25,15 +25,26 @@ Explore and understand the lab environment.  This exercise will cover
 
 ## Guide
 
-### Examine an Inventory
+### Create an Inventory
 
-The first thing we need is an inventory of your managed hosts. This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let’s start with the basics.
+Let’s get started with: The first thing we need is an inventory of your managed hosts. This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let’s start with the basics.
 
-* You should already have the web UI open, if not: Point your browser to the URL you were given, similar to **https://student\<X\>.workshopname.rhdemo.io** (replace "\<X\>" with your student number and "workshopname" with the name of your current workshop) and log in as `admin`. The password will be provided by the instructor.
+You should already have the web UI open, if not: Point your browser to the URL you were given, similar to https://student<N>.<LABID>.events.opentlc.com (replace “<N>” and “<LABID>”) and log in as admin with the password given on the lab landing page.
 
-There will be one inventory, the **Workshop Inventory**. Click the **Workshop Inventory** then click the **Hosts** button
+Create the inventory:
 
-The inventory information at `~/lab_inventory/hosts` was pre-loaded into the Ansible Tower Inventory as part of the provisioning process.
+* In the web UI menu on the left side, go to RESOURCES → Inventories, click the plus button on the right side and choose Inventory.
+* NAME: Workshop Inventory
+* ORGANIZATION: Default
+* Click SAVE
+
+Go back to the Inventories list, there will now be two inventories, the Demo Inventory and the Workshop Inventory. Open the Workshop Inventory and click the HOSTS button, the list will be empty since we have not added any hosts yet.
+
+So let’s add some hosts. First we need to have the list of all managed hosts which are accessible to you within this lab. These can be found in an Ansible inventory file on the Tower node, it was created during deployment of the environment.
+
+You should already have the code-server web UI and a terminal window open from the Accessing your Lab Environment section, if not refer back there to open it.
+
+You can find the inventory information for your lab in the file ~/lab_inventory/hosts. In your code-server terminal, output them with cat, they should look like:
 
 ```bash
 $ cat ~/lab_inventory/hosts

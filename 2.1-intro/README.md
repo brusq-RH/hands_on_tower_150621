@@ -1,9 +1,5 @@
 # Workshop Exercise - Introduction to Ansible Tower
 
-**Read this in other languages**:
-<br>![uk](../../../images/uk.png) [English](README.md),  ![japan](../../../images/japan.png)[日本語](README.ja.md), ![brazil](../../../images/brazil.png) [Portugues do Brasil](README.pt-br.md), ![france](../../../images/fr.png) [Française](README.fr.md),![Español](../../../images/col.png) [Español](README.es.md).
-
-## Table Contents
 
 * [Objective](#objective)
 * [Guide](#guide)
@@ -48,9 +44,46 @@ In this lab you work in a pre-configured lab environment. You will have access t
 
 The Ansible Tower provided in this lab is individually setup for you. Make sure to access the right machine whenever you work with it. Ansible Tower has already been installed and licensed for you, the web UI will be reachable over HTTP/HTTPS.
 
-### Dashboard
+The lab environments in this session have a <LABID> and are separated by numbered student<N> accounts. Follow the instructions given by the lab facilitators to receive the values for student<N> and <LABID>!
 
-Let's have a first look at the Tower: Point your browser to the URL you were given, similar to `https://student<X>.workshopname.rhdemo.io` (replace `<X>` with your student number and `workshopname` with the name of your current workshop) and log in as `admin`. The password will be provided by the instructor.
+On the lab landing page you’ll find the URLs you need to access complete with student number and lab ID already filled in.
+
+Ansible Tower has already been installed and licensed for you, the web UI will be reachable over HTTP/HTTPS.
+
+###  Working the Lab
+Some hints to get you started:
+
+Don’t type everything manually, use copy & paste from the browser when appropriate. But don’t stop to think and understand… ;-)
+
+To edit files or open a terminal window, we provide code-server, basically the great VSCode Editor running in your browser. It’s running on the Tower node and can be accessed through the URL
+
+  `https://student<N>-code.<LABID>.events.opentlc.com`
+
+### Accessing your Lab Environment
+
+Your main points of contact with the lab is the Ansible Tower web UI and code-server, providing a VSCode-experience in your browser.
+
+Now open code-server using the link from the lab landing page or this link in your browser by replacing <N> by your student number and the <LABID>:
+
+    `https://student<N>-code.<LABID>.events.opentlc.com`
+
+![VS code PWD](images/vscode_pwd.png)
+
+Use the password provided on the lab landing page to login into the code-server web UI, you can close the Welcome tab. Now open a new terminal by heading to the menu item Terminal at the top of the page and select New Terminal. A new section will appear in the lower half of the screen and you will be greeted with a prompt:
+
+![VS code terminal](images/vscode_terminal.png)
+
+
+Read the Visual Studio Code Server introduction, to learn more about how to create and edit files, and to work with the Terminal.
+
+Congrats, you now have a shell terminal on your Ansible Tower. From here you run commands or access the other hosts in your lab environment if the lab task requires it.
+
+
+### Tower Dashboard
+
+The dashboard also displays real time data about the execution of tasks completed in playbooks.
+Let's have a first look at the Tower: Point your browser to the URL you were given, similar to https://student<N>.<LABID>.events.opentlc.com (replace <N> with your student number and <LABID> with the ID of this lab) and log in as admin. You can find the password again on the lab landing page.
+
 
 The web UI of Ansible Tower greets you with a dashboard with a graph showing:
 

@@ -175,10 +175,6 @@ Okay, let’s just do that: Go to the **Templates** view, click the ![plus](imag
     <td>Workshop Credentials</td>
   </tr>
   <tr>
-    <td>LIMIT</td>
-    <td>web</td>
-  </tr>
-  <tr>
     <td>OPTIONS</td>
     <td>tasks need to run as root so check **Enable privilege escalation**</td>
   </tr>

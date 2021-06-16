@@ -172,11 +172,7 @@ D'accord, allons-y: accédez à la vue **Modèles**, cliquez sur le bouton ![Plu
   <tr>
     <td>INFORMATIONS D'IDENTIFICATION</td>
     <td>Workshop Credentials</td>
-  </tr>
-  <tr>
-    <td>LIMITE</td>
-    <td>web</td>
-  </tr>    
+  </tr>   
   <tr>
     <td>OPTIONS</td>
     <td>Cochez "Activer l'élévation des previlèges"</td>

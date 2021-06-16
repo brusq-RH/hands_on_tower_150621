@@ -270,6 +270,6 @@ Voici une liste de tâches:
 ----
 **Navigation**
 <br>
-[Exercice précédent](../2.2-cred/README.fr.md) - [Exercice suivant](../2.4-surveys/README.fr.md)
+[Exercice précédent](../2-cred/README.fr.md) - [Exercice suivant](../4-surveys/README.fr.md)
 
 [Cliquez ici pour revenir à l'atelier Ansible pour Red Hat Enterprise Linux](../README.fr.md)

@@ -193,6 +193,6 @@ $ curl http://22.33.44.55
 Notez comment les deux variables ont été utilisées par le playbook pour créer le contenu du fichier `index.html`.
 
 ----
-[Exercice précédent](../2.3-projects/README.fr.md) - [Exercice suivant](../2.5-rbac/README.fr.md)
+[Exercice précédent](../3-projects/README.fr.md) - [Exercice suivant](../5-rbac/README.fr.md)
 
 [Cliquez ici pour revenir à l'atelier Ansible pour Red Hat Enterprise Linux](../README.fr.md)

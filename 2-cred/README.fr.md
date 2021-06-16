@@ -190,6 +190,6 @@ D'accord, un petit défi: exécutez un ad hoc pour vous assurer que le package "
 ----
 **Navigation**
 <br>
-[Exercice précédent](../2.1-intro/README.fr.md) - [Exercice suivant](../2.3-projects/README.fr.md)
+[Exercice précédent](../1-intro/README.fr.md) - [Exercice suivant](../3-projects/README.fr.md)
 
 [Cliquez ici pour revenir à l'atelier Ansible pour Red Hat Enterprise Linux](../README.fr.md)

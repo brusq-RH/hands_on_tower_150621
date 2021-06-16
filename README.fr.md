@@ -27,19 +27,20 @@ Jetez également un œil à notre plate-forme des meilleures pratiques Ansible:
 
 Le temps requis pour faire les ateliers dépend fortement de plusieurs facteurs: le nombre de participants, leur familiarité avec Linux en général et le nombre de discussions qui se font entre les deux.
 
+##  Lab architecture
+
+![ansible rhel lab diagram](/images/rhel_lab_diagram.png)
 
 ##  Exercices sur Ansible Tower
 
 
-![ansible rhel lab diagram](/images/rhel_lab_diagram.png)
-
- - [Exercise 1 - Introduction to Tower](2.1-intro/README.fr.md)
- - [Exercise 2 - Inventories, credentials and ad hoc commands](2.2-cred/README.fr.md)
- - [Exercise 3 - Projects & job templates](2.3-projects/README.fr.md)
- - [Exercise 4 - Surveys](2.4-surveys/README.fr.md)
- - [Exercise 5 - Role based access control](2.5-rbac/README.fr.md)
- - [Exercise 6 - Workflows](2.6-workflows/README.fr.md)
- - [Exercise 7 - Wrap up](2.7-wrap/README.fr.md)
+ - [Exercise 1 - Introduction to Tower](1-intro/README.fr.md)
+ - [Exercise 2 - Inventories, credentials and ad hoc commands](2-cred/README.fr.md)
+ - [Exercise 3 - Projects & job templates](3-projects/README.fr.md)
+ - [Exercise 4 - Surveys](4-surveys/README.fr.md)
+ - [Exercise 5 - Role based access control](5-rbac/README.fr.md)
+ - [Exercise 6 - Workflows](6-workflows/README.fr.md)
+ - [Exercise 7 - Wrap up](7-wrap/README.fr.md)
 
 ## Exercices supplémentaires
 

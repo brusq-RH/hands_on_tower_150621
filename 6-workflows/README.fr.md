@@ -285,6 +285,6 @@ $ curl http://localhost:8080/coolapp/
 ----
 **Navigation**
 <br>
-[Exercice précédent](../2.5-rbac/README.fr.md) - [Exercice suivant](../2.7-wrap/README.fr.md)
+[Exercice précédent](../5-rbac/README.fr.md) - [Exercice suivant](../7-wrap/README.fr.md)
 
 [Cliquez ici pour revenir à l'atelier Ansible pour Red Hat Enterprise Linux](../README.fr.md)

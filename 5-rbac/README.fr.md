@@ -154,6 +154,6 @@ Cette capacité est l’une des principales forces d’Ansible Tower \!
 ----
 **Navigation**
 <br>
-[Exercice précédent](../2.4-surveys/README.fr.md) - [Exercice suivant](../2.6-workflows/README.fr.md)
+[Exercice précédent](../4-surveys/README.fr.md) - [Exercice suivant](../6-workflows/README.fr.md)
 
 [Cliquez ici pour revenir à l'atelier Ansible pour Red Hat Enterprise Linux](../README.fr.md)

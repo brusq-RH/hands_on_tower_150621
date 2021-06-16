@@ -200,6 +200,6 @@ Félicitations, vous avez terminé tous vos ateliers \! Nous espérons que vous 
 ----
 **Navigation**
 <br>
-[Exercise précédent](../2.6-workflows/README.fr.md)
+[Exercise précédent](../6-workflows/README.fr.md)
 
 [Cliquez ici pour revenir à l'atelier Ansible pour Red Hat Enterprise Linux](../README.fr.md)

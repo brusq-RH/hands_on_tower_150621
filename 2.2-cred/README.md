@@ -66,6 +66,12 @@ node3 ansible_host=44.55.66.77
 ansible ansible_host=11.22.33.44
 ```
 
+Add the  node1, node2 and node3  using the right ansible_host variable as shown below :
+
+![Create host](images/create_host.png) 
+
+
+
 > **Warning**
 >
 > In your inventory the IP addresses will be different.

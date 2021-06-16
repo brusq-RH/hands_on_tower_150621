@@ -83,7 +83,7 @@ Congrats, you now have a shell terminal on your Ansible Tower. From here you run
 The dashboard also displays real time data about the execution of tasks completed in playbooks.
 Let's have a first look at the Tower: Point your browser to the URL you were given, similar to :
 
-    https://student<N>-code.<LABID>.events.opentlc.com
+    https://student<N>.<LABID>.events.opentlc.com
 
 (replace `<N>` with your student number and `<LABID>` with the ID of this lab) and log in as admin. You can find the password again on the lab landing page.
 

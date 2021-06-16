@@ -29,7 +29,11 @@ Explore and understand the lab environment.  This exercise will cover
 
 Let’s get started with: The first thing we need is an inventory of your managed hosts. This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let’s start with the basics.
 
-You should already have the web UI open, if not: Point your browser to the URL you were given, similar to https://student<N>.<LABID>.events.opentlc.com (replace “<N>” and “<LABID>”) and log in as admin with the password given on the lab landing page.
+You should already have the web UI open, if not: Point your browser to the URL you were given, similar to 
+
+    https://student<N>.<LABID>.events.opentlc.com
+
+(replace `<N>` and `<LABID>`) and log in as admin with the password given on the lab landing page.
 
 Create the inventory:
 
@@ -38,7 +42,7 @@ Create the inventory:
 * ORGANIZATION: Default
 * Click SAVE
 
-Go back to the Inventories list, there will now be two inventories, the Demo Inventory and the Workshop Inventory. Open the Workshop Inventory and click the HOSTS button, the list will be empty since we have not added any hosts yet.
+Go back to the Inventories list. Open the Workshop Inventory and click the HOSTS button, the list will be empty since we have not added any hosts yet.
 
 So let’s add some hosts. First we need to have the list of all managed hosts which are accessible to you within this lab. These can be found in an Ansible inventory file on the Tower node, it was created during deployment of the environment.
 
@@ -66,32 +70,67 @@ ansible ansible_host=11.22.33.44
 >
 > In your inventory the IP addresses will be different.
 
-### Examine Machine Credentials
 
-Now we will examine the credentials to access our managed hosts from Tower.  As part of the provisioning process for this Ansible Workshop the **Workshop Credential** has already been setup.
 
-In the **RESOURCES** menu choose **Credentials**. Now click on the **Workshop Credential**.
 
-Note the following information:
+###  Machine Credentials
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>Credential Type</td>
-    <td><code>Machine</code>- Machine credentials define ssh and user-level privilege escalation access for playbooks. They are used when submitting jobs to run playbooks on a remote host.</td>
-  </tr>
-  <tr>
-    <td>username</td>
-    <td><code>ec2-user</code> which matches our command-line Ansible inventory username for the other linux nodes</td>
-  </tr>
-  <tr>
-    <td>SSH PRIVATE KEY</td>
-    <td><code>ENCRYPTED</code> - take note that you can't actually examine the SSH private key once someone hands it over to Ansible Tower</td>
-  </tr>
-</table>
+One of the great features of Ansible Tower is to make credentials usable to users without making them visible. To allow Tower to execute jobs on remote hosts, you must configure connection credentials.
+
+> **Tip**
+>
+>This is one of the most important features of Tower: Credential Separation! Credentials are defined separately and not with the hosts or inventory settings.
+
+As this is an important part of your Tower setup, why not make sure that connecting to the managed nodes from Tower is working?
+
+To test access to the nodes via SSH do the following:
+
+* In your browser bring up the terminal window in code-server (remember this runs on the Tower node)
+* From here as user ec2-user SSH into node1 or one of the other nodes and execute sudo -i.
+* For the SSH connection use the node password from the inventory file, sudo -i works without password.
+
+`[student1@ansible ~]$ ssh ec2-user@node1
+[ec2-user@node1 ~]$
+sudo -i
+[root@node1 ~]# exit
+[ec2-user@node1 ~]$ exit
+
+What does this mean?`
+* Tower user student<"N"> can connect to the managed hosts with SSH key authentication as user ec2-user.
+* User ec2-user can execute commands on the managed hosts as root with sudo.
+
+###  Configure Machine Credentials
+Now we will configure the credentials to access our managed hosts from Tower. In the RESOURCES menu choose Credentials. Now:
+
+Click the '+' button to add new credentials
+
+* NAME: Workshop Credentials
+* ORGANIZATION: Click on the magnifying glass, pick Default and click SELECT
+* CREDENTIAL TYPE: Click on the magnifying glass, pick Machine as type and click SELECT (you will have to use the search or cycle through the types to find it).
+* USERNAME: ec2-user
+* PRIVILEGE ESCALATION METHOD: sudo
+
+> **Tip**
+>
+>Whenever you see a magnifiying glass icon next to an input field, clicking it will open a list to choose from.
+
+As we are using SSH key authentication, you have to provide an SSH private key that can be used to access the hosts. You could also configure password authentication here.
+
+Bring up your code-server terminal on Tower, and cat the SSH private key:
+
+`[student1@ansible ~]$ cat .ssh/aws-private.pem
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
+[...]
+-----END RSA PRIVATE KEY-----`
+
+* Copy the complete private key (including “BEGIN” and “END” lines) and paste it into the SSH PRIVATE KEY field in the web UI.
+* Click SAVE
+
+Go back to the RESOURCES -> Credentials -> Workshop Credentials and note that the SSH key is not visible.
+
+You have now setup credentials to use later for your inventory hosts.
+
 
 ### Run Ad Hoc commands
 

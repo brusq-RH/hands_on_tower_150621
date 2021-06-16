@@ -89,10 +89,6 @@ Now you create a new Template that includes a survey.
     <td>Workshop Credentials</td>
   </tr>
   <tr>
-    <td>LIMIT</td>
-    <td>web</td>
-  </tr>
-  <tr>
     <td>OPTIONS</td>
     <td>Enable Privilege Escalation</td>
   </tr>

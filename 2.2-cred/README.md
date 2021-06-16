@@ -72,7 +72,6 @@ ansible ansible_host=11.22.33.44
 
 
 
-
 ###  Machine Credentials
 
 One of the great features of Ansible Tower is to make credentials usable to users without making them visible. To allow Tower to execute jobs on remote hosts, you must configure connection credentials.
@@ -80,6 +79,7 @@ One of the great features of Ansible Tower is to make credentials usable to user
 > **Tip**
 >
 >This is one of the most important features of Tower: Credential Separation! Credentials are defined separately and not with the hosts or inventory settings.
+
 
 As this is an important part of your Tower setup, why not make sure that connecting to the managed nodes from Tower is working?
 
@@ -89,11 +89,13 @@ To test access to the nodes via SSH do the following:
 * From here as user ec2-user SSH into node1 or one of the other nodes and execute sudo -i.
 * For the SSH connection use the node password from the inventory file, sudo -i works without password.
 
-`[student1@ansible ~]$ ssh ec2-user@node1
+```bash
+[student1@ansible ~]$ ssh ec2-user@node1
 [ec2-user@node1 ~]$
 sudo -i
 [root@node1 ~]# exit
 [ec2-user@node1 ~]$ exit
+```
 
 What does this mean?`
 * Tower user student<"N"> can connect to the managed hosts with SSH key authentication as user ec2-user.
@@ -118,11 +120,14 @@ As we are using SSH key authentication, you have to provide an SSH private key t
 
 Bring up your code-server terminal on Tower, and cat the SSH private key:
 
-`[student1@ansible ~]$ cat .ssh/aws-private.pem
+```bash
+[student1@ansible ~]$ cat .ssh/aws-private.pem
 -----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
 [...]
 -----END RSA PRIVATE KEY-----`
+```
+
 
 * Copy the complete private key (including “BEGIN” and “END” lines) and paste it into the SSH PRIVATE KEY field in the web UI.
 * Click SAVE

@@ -1,7 +1,7 @@
 # Atelier - Les inventaires, identifications et commandes Ad-hoc
 
 **Lisez ceci dans d'autres langues**:
-<br>![uk](../../../images/uk.png) [English](README.md),![france](../../../images/fr.png) [Française](README.fr.md)
+<br>![uk](../images/uk.png) [English](README.md),![france](../images/fr.png) [Française](README.fr.md)
 
 ## Table des matières
 

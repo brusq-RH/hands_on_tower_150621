@@ -6,11 +6,8 @@
 
 Ansible est un moteur d'automatisation informatique simple mais puissant pour le déploiement d'applications, la gestion de la configuration et l'orchestration que vous pouvez apprendre rapidement.
 
-Dans la première section de ce laboratoire, vous apprendrez à utiliser Ansible Engine pour l'automatisation, des bases aux concepts plus avancés.
+Ce Hands-on couvre Tower et donne à l'utilisateur un aperçu de ce qu'est Tower, de son fonctionnement et de ses avantages.
 
-La deuxième section de ce laboratoire couvre Tower et donne à l'utilisateur un aperçu de ce qu'est Tower, de son fonctionnement et de ses avantages.
-
-Après avoir terminé ce laboratoire, vous êtes prêt à commencer à utiliser Ansible pour vos besoins d'automatisation.
 
 ## Présentations
 

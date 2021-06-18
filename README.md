@@ -4,7 +4,9 @@
 <br>![uk](/images/uk.png) [English](README.md),![france](/images/fr.png) [Française](README.fr.md)
 
 
-Ansible is simple yet powerful IT automation for application deployment, configuration management, and orchestration that you can learn quickly. In the first section of this lab you will learn to use command-line Ansible for automation from the basics up to some more advanced concepts. The second section of this lab covers Ansible Automation Platform and provide the user an overview of what Ansible Tower is, how it works and what the benefit of it is.
+Ansible is simple yet powerful IT automation for application deployment, configuration management, and orchestration that you can learn quickly. 
+
+This lab covers Ansible Tower and provide the user an overview of what Ansible Tower is, how it works and what the benefit of it is.
 
 After finishing this lab you are ready to start using Ansible for your automation requirements.
 

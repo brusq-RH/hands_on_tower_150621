@@ -77,8 +77,9 @@ Congrats, you now have a shell terminal on your Ansible Tower. From here you run
 
 ### Accessing Tower Dashboard
 
-The dashboard also displays real time data about the execution of tasks completed in playbooks.
-Let's have a first look at the Tower: Point your browser to the URL you were given, similar to :
+Let's have a first look at the Tower !
+
+Point your browser to the URL you were given, similar to :
 
     https://student<N>.<LABID>.events.opentlc.com
 

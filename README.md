@@ -22,10 +22,10 @@ After finishing this lab you are ready to start using Ansible for your automatio
 The exercises are self explanatory and guide the participants through the entire lab. All concepts are explained when they are introduced.
 
 There is an optional presentation available to support the workshops and explain Automation, the basics of Ansible and the topics of the exercises in more detail:
-[Ansible RHEL Automation](../../decks/ansible_rhel.pdf)
+[Ansible RHEL Automation](/decks/ansible_rhel.pdf)
 
 Also have a look at our Ansible Best Practices Deck:
-[Ansible Best Practices](../../decks/ansible_best_practices.pdf)
+[Ansible Best Practices](/decks/ansible_best_practices.pdf)
 
 ## Time planning
 

@@ -17,10 +17,10 @@ Après avoir terminé ce laboratoire, vous êtes prêt à commencer à utiliser 
 Les exercices sont explicites et guident les participants à travers tout le laboratoire. Tous les concepts sont expliqués lors de leur introduction.
 
 Une présentation facultative est disponible pour soutenir les ateliers et expliquer l'automatisation, les bases d'Ansible et les sujets des exercices plus en détail:
-[Ansible RHEL Automation](../../decks/ansible_rhel.pdf)
+[Ansible RHEL Automation](/decks/ansible_rhel.pdf)
 
 Jetez également un œil à notre plate-forme des meilleures pratiques Ansible:
-[Ansible Best Practices](../../decks/ansible_best_practices.pdf)
+[Ansible Best Practices](/decks/ansible_best_practices.pdf)
 
 ## Planification du temps
 

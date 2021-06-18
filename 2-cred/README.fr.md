@@ -7,8 +7,9 @@
 
 * [Objectif](#objectif)
 * [Guide](#guide)
-* [Examiner un inventaire](#examiner-un-inventaire)
-* [Examination des informations d'identifications](#Examination-des-informations-d-identification)
+* [Creer un inventaire](#creer-un-inventaire)
+* [Machine Credentials](#machine-credentials)
+* [Configurer des informations d'identifications](#configurer-des-informations-d-identification)
 * [Exécution des commandes Ad-hoc](#exécution-des-commandes-ad-hoc)
 * [Défi: Les commandes Ad-hoc](#défi-les-commandes-ad-hoc)
 
@@ -22,15 +23,29 @@ Explorez et comprenez l'environnement du laboratoire. Cet exercice couvrira
 
 # Guide
 
-## Examiner un inventaire
+## Creer un inventaire
 
 La première chose dont nous avons besoin est un inventaire de vos hôtes gérés. C'est l'équivalent d'un fichier d'inventaire dans Ansible Engine. Il y en a beaucoup plus (comme les inventaires dynamiques), mais commençons par les bases.
 
-  - Vous devriez déjà avoir l'interface utilisateur Web ouverte, sinon: pointez votre navigateur sur l'URL qui vous a été donnée, similaire à **https://student\<X\>.workshopname.rhdemo.io** (remplacez "\<X\> "avec votre numéro d'étudiant et" workshopname "avec le nom de votre atelier actuel) et connectez-vous en tant qu'"admin". Le mot de passe sera fourni par l'instructeur.
+Vous devriez déjà avoir l'interface utilisateur Web ouverte, sinon ouvrir :
 
-Il y aura un seul inventaire, l'**inventaire de l'atelier**. Cliquez sur **Workshop Inventory** puis sur le bouton **Hôtes**
+    https://student<N>.<LABID>.events.opentlc.com
 
-Les informations d'inventaire dans `~/lab_inventory/hosts` ont été préchargées dans l'inventaire de la tour Ansible dans le cadre du processus d'approvisionnement.
+(remplacez `<N>` avec votre numéro d'étudiant et `<LABID>` avec le nom de votre atelier actuel) et connectez-vous en tant qu'"admin" avec le mot de passe fournit sur la page d'accueil.
+
+Creer l'inventaire:
+* Dans Tower, cliquer sur  RESOURCES → Inventaires
+* Cliquer sur le bouton '+' et 'Inventaire'
+* Remplir le champs 'NOM' : Workshop Inventory
+* Remplir le champs 'ORGANIZATION' : Default
+* Sauvegarder
+
+
+Revenir sur la liste des inventaires. Ouvrir 'Workshop Inventory' et cliquer  sur 'HOTES', la liste est vide car nous n'avons pas encore ajouter d'Hotes. 
+
+Rajoutons des Hotes. Tout d'abord, nous devons recuperer la liste des machines qui sont accessibles depuis votre lab.
+
+En utilisant l'interface code-server, ouvrez un terminal et ouvrir le contenu du fichier  ~/lab_inventory/hosts :
 
 ```bash
 $ cat ~/lab_inventory/hosts
@@ -47,36 +62,78 @@ node3 ansible_host=44.55.66.77
 [control]
 ansible ansible_host=11.22.33.44
 ```
-> **Avertissement**
+
+> **Warning**
 >
-> Dans votre inventaire, les adresses IP seront différentes.
+> Les IPs de votre lab seront differentes
 
-## Examination des informations d identification
 
-Nous allons maintenant examiner les informations d'identification pour accéder à nos hôtes gérés depuis Tower. Dans le cadre du processus d'approvisionnement de cet atelier Ansible, **les informations d'identification de l'atelier** ont déjà été configurées.
+Ajouter  node1, node2 and node3 en bien specifiant l'IP de chacun des noeuds dans la variable ansible_host, comme dans l'exemple ci dessous:
 
-Dans le menu **RESSOURCES**, choisissez **INFORMATIONS D’IDENTIFICATION**. Maintenant, cliquez sur **Workshop Credential**.
+![Create host](images/create_host.png) 
 
-Notez les informations suivantes:
+###  Machine informations d identification
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>Credential Type</td>
-    <td><code>Machine</code>- Machine credentials define ssh and user-level privilege escalation access for playbooks. They are used when submitting jobs to run playbooks on a remote host.</td>
-  </tr>
-  <tr>
-    <td>username</td>
-    <td><code>ec2-user</code> which matches our command-line Ansible inventory username for the other linux nodes</td>
-  </tr>
-  <tr>
-    <td>SSH PRIVATE KEY</td>
-    <td><code>ENCRYPTED</code> - take note that you can't actually examine the SSH private key once someone hands it over to Ansible Tower</td>
-  </tr>
-</table>
+Pour que Tower puisse executer des actions sur des noeuds distants, il faut configurer des informations d'identification (mot de passe, clé SSH, ...)
+Une des fonctionalités les plus importantes de Tower est de pouvoir stocker et utiliser ces credeninformations , sans les rendre visibles. 
+
+> **Tip**
+>
+> Les Credentials sont definis de maniere independantes et non pas directement  attachés à un Hote ou un Inventaire. 
+
+Pour tester l'acces aux noeuds managés :
+
+* Utiliser  code-server et ouvrir un terminal (il fonctionne par defaut sur le noeud Tower node)
+* Se connecter en SSH avec l'utilisateur  ec2-user  sur node1 (ou node 2 ou node3)et executer sudo -i.
+
+```bash
+[student1@ansible ~]$ ssh ec2-user@node1
+[ec2-user@node1 ~]$
+sudo -i
+[root@node1 ~]# exit
+[ec2-user@node1 ~]$ exit
+```
+
+En resumé ?`
+* L'utilisateur  `student<N>` peut se connecter en SSH sans mot de passe sur les machines en utilisant l'utilisateur ec2-user.
+* L'utilisateur ec2-user peut effectuer des commandes en tant que root via sudo, sans renseigner de mot de passe additionel.
+
+
+## Configurer des informations d identification
+
+Maintenant, nous allons configurerdes informations d identification pour que Tower puisse acceder a nos noeuds managés :
+
+* Depuis l'interface Tower, dans le menu RESOURCES, choisir 'informations d identification".
+* Cliquer  sur le bouton '+' 
+
+* Remplir les champs :
+ * NOM: Workshop Credentials
+ * ORGANISATION: Click on the magnifying glass, pick Default and click SELECT
+ * Type d'informations d’identification : Cliquer sur la loupe, et rechercher 'machine'. Cocher et valider en appuyant sur 'selectionner'
+ * Nom d'utilisateur: ec2-user
+ * Méthode d'escalade privilégiée: sudo
+
+Comme nous utilisons une identification par clé SSH, il faut fournir la clé SSH privée key 
+
+(On pourrait egalement utiliser une authentification par mot de passe) 
+
+Se connecter au terminal code-server et ouvrir le fichier .ssh/aws-private.pem , qui contient la clé privée SSH  : 
+
+```bash
+[student1@ansible ~]$ cat .ssh/aws-private.pem
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
+[...]
+-----END RSA PRIVATE KEY-----`
+```
+
+
+* Copier cette clé (bieen inclure les lignes “BEGIN” et “END” ) et la copier dans le champs "Clé privée SSH" de l'interface Tower.
+* Sauvegarder
+
+Revenir sur RESOURCES -> informations d identification -> Workshop Credentials et constateerr que la clé SSH n'est plus visible.
+
+Vous avez configurer des informations d'identification qui seront utilisés dans les exercices suivants.
 
 
 ## Exécution des commandes Ad hoc

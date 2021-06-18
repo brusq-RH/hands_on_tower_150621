@@ -183,7 +183,7 @@ Avant le lancement, le questionnaire demandera les valeurs des **First Line** et
 Une fois le travail terminé, consultez la page d'accueil d'Apache. Dans la console SSH sur l'hôte de contrôle, exécutez `curl` par rapport à l'adresse IP de votre `node1`:
 
 ```bash
-$ curl http://22.33.44.55
+$ curl http://node1
 <body>
 <h1>Apache is running fine</h1>
 <h1>This is survey field "First Line": line one</h1>

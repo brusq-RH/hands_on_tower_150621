@@ -136,7 +136,7 @@ Déconnectez-vous maintenant de l'interface utilisateur Web de Tower et reconnec
 
 Vérifiez le résultat: exécutez à nouveau `curl` sur l'hôte de contrôle pour extraire le contenu du serveur Web sur l'adresse IP de` node1` (vous pouvez bien sûr vérifier aussi `node2` et` node3`):
 ```bash
-$ curl http://22.33.44.55
+$ curl http://node1
 ```
 
 Rappelez-vous simplement ce que vous venez de faire: vous avez autorisé un utilisateur restreint à exécuter un Playbook Ansible

@@ -82,7 +82,7 @@ Créez le projet pour les opérations Web. Dans la vue **Projets **, cliquez sur
   </tr>
   <tr>
     <td>SCM BRANCH/TAG/COMMIT</td>
-    <td><code>webops</code></td>
+    <td><code>webops_summit_2020</code></td>
   </tr>  
   <tr>
     <td>SCM UPDATE OPTIONS</td>
@@ -119,7 +119,7 @@ Créez le projet pour les développeurs d'applications. Dans la vue **Projets** 
   </tr>
   <tr>
     <td>SCM BRANCH/TAG/COMMIT</td>
-    <td><code>webdev</code></td>
+    <td><code>webdev_summit_2020</code></td>
   </tr>
   <tr>
     <td>SCM UPDATE OPTIONS</td>

@@ -90,7 +90,9 @@ Compared to the previous Apache installation role there is a major difference: t
 
 There is of course more then one way to accomplish this, but here is what you should do:
 
-* Make sure all hosts are in the inventory group `Webserver`.
+* Create a new inventory `Webserver`
+* Add node1, node2 and node3 in this inventory
+
 * Define a variable `stage` with the value `dev` for the `Webserver` inventory:
 
   * Add `stage: dev` to the inventory `Webserver` by putting it into the **VARIABLES** field beneath the three start-yaml dashes.

@@ -86,7 +86,7 @@ Create the project for the web operations team.  In the **Projects** view click 
   </tr>
   <tr>
     <td>SCM BRANCH/TAG/COMMIT</td>
-    <td><code>webops</code></td>
+    <td><code>webops_summit_2020</code></td>
   </tr>
   <tr>
     <td>SCM UPDATE OPTIONS</td>
@@ -122,7 +122,7 @@ Create the project for the web developers team. In the **Projects** view click t
   </tr>
   <tr>
     <td>SCM BRANCH/TAG/COMMIT</td>
-    <td><code>webdev</code></td>
+    <td><code>webdev_summit_2020</code></td>
   </tr>
   <tr>
     <td>SCM UPDATE OPTIONS</td>
@@ -168,10 +168,6 @@ Go to the **Templates** view, click the green plus button and choose **Job Templ
       <td>Workshop Credentials</td>
     </tr>
     <tr>
-      <td>LIMIT</td>
-      <td>web</td>
-    </tr>
-    <tr>
       <td>OPTIONS</td>
       <td>✓ ENABLE PRIVILEGE ESCALATION</td>
     </tr>
@@ -211,10 +207,6 @@ Go to the **Templates** view, click the green plus button and choose **Job Templ
     <tr>
       <td>CREDENTIAL</td>
       <td>Workshop Credentials</td>
-    </tr>
-    <tr>
-      <td>LIMIT</td>
-      <td>web</td>
     </tr>
     <tr>
       <td>OPTIONS</td>

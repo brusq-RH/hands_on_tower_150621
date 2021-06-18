@@ -85,7 +85,9 @@ Par rapport au précédent rôle d'installation d'Apache, il y a une différence
 
 Il y a bien sûr plus d'une façon d'y parvenir, mais voici ce que vous devez faire:
 
-- Assurez-vous que tous les hôtes sont dans le groupe d'inventaire `Webserver`.
+- Creer un nouvel inventaire  `Webserver`
+
+- Ajouter node1, node2, et node3
 
 - Définissez une variable `stage` avec la valeur `dev` pour l'inventaire `Webserver`:
 

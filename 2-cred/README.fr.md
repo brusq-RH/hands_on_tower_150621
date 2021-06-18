@@ -68,14 +68,22 @@ ansible ansible_host=11.22.33.44
 > Les IPs de votre lab seront differentes
 
 
-Ajouter  node1, node2 and node3 en bien specifiant l'IP de chacun des hotes dans la variable ansible_host, comme dans l'exemple ci dessous:
+Revenir sur l'interface Tower, cliquer sur le bouton '+'  :
+* NOM: node1
+* Dans le champs **variables**, add **ansible_host: x.x.x.x** en utilisant l'IP provenant dans votre fichier  ~/lab_inventory/hosts file
+* "Enregister" 
+* Fermer le menu d'édition de l'hote en cliquant sur l'icone 'x' en haut à droite
+
 
 ![Create host](images/create_host.png) 
 
+Répéter ces étapes pour ajouter les hotes node2 et node3.
 
-A la fin, cliquer sur **RESSOURCES → Inventaires → Workshop Inventory** et **hotes** , verifier que les 3 hotes sont présents :
+
+A la fin, cliquer sur  **RESSOURCES → Inventaires → Workshop Inventory** et **hotes**  , vérifier que les 3 hotes sont présents :
 
 ![hosts_added](images/3nodes_added.png) 
+
 
 
 

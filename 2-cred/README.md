@@ -43,7 +43,7 @@ Create the inventory:
 * ORGANIZATION: Default
 * Click SAVE
 
-Go back to the Inventories list. Open the Workshop Inventory and click the **HOSTS** button, the list will be empty since we have not added any hosts yet.
+Go back to the Inventories list. Open the **Workshop Inventory** and click the **HOSTS** button, the list will be empty since we have not added any hosts yet.
 
 So let’s add some hosts. First we need to have the list of all managed hosts which are accessible to you within this lab. These can be found in an Ansible inventory file on the Tower node, it was created during deployment of the environment.
 
@@ -71,10 +71,15 @@ ansible ansible_host=11.22.33.44
 >
 > In your inventory the IP addresses will be different.
 
-Add the  node1, node2 and node3  using the right ansible_host variable as shown below :
+So back to Tower interface, Click on '+' button :
+* NAME: node1
+* In the variables, add **ansible_host: x.x.x.x** using the right IP found in your ~/lab_inventory/hosts file
+* Click SAVE 
+* Close the Host edition windows by clicking on the 'x' icon.
 
 ![Create host](images/create_host.png) 
 
+Repeat the steps to add  node2 and node3 in the inventory.
 
 At then end, clock on **RESOURCES → Inventories → Workshop Inventory** et **Hosts** , check the 3 nodes have well been added :
 

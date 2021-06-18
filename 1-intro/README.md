@@ -42,20 +42,20 @@ In this lab you work in a pre-configured lab environment. You will have access t
 | Managed Host 2               | node2          |
 | Managed Host 2               | node3          |
 
-The Ansible Tower provided in this lab is individually setup for you. Make sure to access the right machine whenever you work with it. Ansible Tower has already been installed and licensed for you, the web UI will be reachable over HTTP/HTTPS.
+The Ansible Tower provided in this lab is individually setup for you. Make sure to access the right machine whenever you work with it. 
+
+Ansible Tower has already been installed and licensed for you, the web UI will be reachable over HTTP/HTTPS.
 
 The lab environments in this session have a `<LABID>` and are separated by numbered `student<N>` accounts. Follow the instructions given by the lab facilitators to receive the values for `student<N>` and `<LABID>`
 
 On the lab landing page you’ll find the URLs you need to access complete with student number and lab ID already filled in.
-
-Ansible Tower has already been installed and licensed for you, the web UI will be reachable over HTTP/HTTPS.
 
 ###  Working the Lab
 Some hints to get you started:
 
 * Don’t type everything manually, use copy & paste from the browser when appropriate. But don’t stop to think and understand… ;-)
 
-* To edit files or open a terminal window, we provide code-server, basically the great VSCode Editor running in your browser. It’s running on the Tower node and can be accessed through the URL :
+* To edit files or open a terminal window, we provide code-server, basically the great VSCode Editor running in your browser. It’s running on the Tower node.
    
 
 ### Accessing VScode Lab Environment
@@ -71,9 +71,6 @@ Now open code-server using the link from the lab landing page or this link in yo
 Use the password provided on the lab landing page to login into the code-server web UI, you can close the Welcome tab. Now open a new terminal by heading to the menu item Terminal at the top of the page and select New Terminal. A new section will appear in the lower half of the screen and you will be greeted with a prompt:
 
 ![VS code terminal](images/vscode-terminal.png)
-
-
-Read the Visual Studio Code Server introduction, to learn more about how to create and edit files, and to work with the Terminal.
 
 Congrats, you now have a shell terminal on your Ansible Tower. From here you run commands or access the other hosts in your lab environment if the lab task requires it.
 

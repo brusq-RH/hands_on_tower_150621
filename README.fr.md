@@ -31,7 +31,7 @@ Le temps requis pour faire les ateliers dépend fortement de plusieurs facteurs:
 ##  Exercices sur Ansible Tower
 
 
- - [Exercise 1 - Introduction to Tower](1-intro/README.fr.md)
+ - [Exercise 1 - Introduction to Tower](1-intro/README.md)
  - [Exercise 2 - Inventories, credentials and ad hoc commands](2-cred/README.fr.md)
  - [Exercise 3 - Projects & job templates](3-projects/README.fr.md)
  - [Exercise 4 - Surveys](4-surveys/README.fr.md)

@@ -116,6 +116,10 @@ Now you need the URL to access the repo. Go to the Github repository mentioned a
      <td><code>https://github.com/ansible/workshop-examples.git</code></td>
    </tr>
    <tr>
+     <td>SCM BRANCH/TAG/COMMIT</td>
+     <td>summit_2020</td>
+   </tr>
+   <tr>
      <td>SCM UPDATE OPTIONS</td>
      <td>Tick the first three boxes to always get a fresh copy of the repository and to update the repository when launching a job</td>
    </tr>

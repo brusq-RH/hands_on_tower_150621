@@ -114,6 +114,10 @@ Vous avez maintenant besoin de l'URL pour accéder au dépôt. Accédez au réf�
      <td><code>https://github.com/ansible/workshop-examples.git</code></td>
    </tr>
    <tr>
+     <td>BRANCHE SCM/BALISE/VALIDATION</td>
+     <td>summit_2020</td>
+   </tr>
+   <tr>
      <td>OPTIONS DE MISE A JOUR SCM</td>
      <td>Cocher les 3 premieres cases.</td>
    </tr>

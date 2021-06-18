@@ -34,7 +34,7 @@ You should already have the web UI open, if not: Point your browser to the URL y
 
     https://student<N>.<LABID>.events.opentlc.com
 
-(replace `<N>` and `<LABID>`) and log in as admin with the password given on the lab landing page.
+replace `<N>` and `<LABID>` and log in as admin with the password given on the lab landing page.
 
 Create the inventory:
 
@@ -67,15 +67,13 @@ node3 ansible_host=44.55.66.77
 ansible ansible_host=11.22.33.44
 ```
 
-Add the  node1, node2 and node3  using the right ansible_host variable as shown below :
-
-![Create host](images/create_host.png) 
-
-
-
 > **Warning**
 >
 > In your inventory the IP addresses will be different.
+
+Add the  node1, node2 and node3  using the right ansible_host variable as shown below :
+
+![Create host](images/create_host.png) 
 
 
 
@@ -94,7 +92,6 @@ To test access to the nodes via SSH do the following:
 
 * In your browser bring up the terminal window in code-server (remember this runs on the Tower node)
 * From here as user ec2-user SSH into node1 or one of the other nodes and execute sudo -i.
-* For the SSH connection use the node password from the inventory file, sudo -i works without password.
 
 ```bash
 [student1@ansible ~]$ ssh ec2-user@node1
@@ -105,7 +102,7 @@ sudo -i
 ```
 
 What does this mean?`
-* Tower user student<"N"> can connect to the managed hosts with SSH key authentication as user ec2-user.
+* Tower user `student<N>` can connect to the managed hosts with SSH key authentication as user ec2-user.
 * User ec2-user can execute commands on the managed hosts as root with sudo.
 
 ###  Configure Machine Credentials

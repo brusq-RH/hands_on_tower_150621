@@ -34,14 +34,14 @@ Vous devriez déjà avoir l'interface utilisateur Web ouverte, sinon ouvrir :
 (remplacez `<N>` avec votre numéro d'étudiant et `<LABID>` avec le nom de votre atelier actuel) et connectez-vous en tant qu'"admin" avec le mot de passe fournit sur la page d'accueil.
 
 Creer l'inventaire:
-* Dans Tower, cliquer sur  RESOURCES → Inventaires
-* Cliquer sur le bouton '+' et 'Inventaire'
+* Dans Tower, cliquer sur  **RESOURCES** → **Inventaires**
+* Cliquer sur le bouton '+' et **Inventaire**
 * Remplir le champs 'NOM' : Workshop Inventory
 * Remplir le champs 'ORGANIZATION' : Default
 * Sauvegarder
 
 
-Revenir sur la liste des inventaires. Ouvrir 'Workshop Inventory' et cliquer  sur 'HOTES', la liste est vide car nous n'avons pas encore ajouter d'Hotes. 
+Revenir sur la liste des inventaires. Ouvrir 'Workshop Inventory' et cliquer  sur **HOTES**, la liste est vide car nous n'avons pas encore ajouter d'Hotes. 
 
 Rajoutons des Hotes. Tout d'abord, nous devons recuperer la liste des machines qui sont accessibles depuis votre lab.
 
@@ -68,20 +68,27 @@ ansible ansible_host=11.22.33.44
 > Les IPs de votre lab seront differentes
 
 
-Ajouter  node1, node2 and node3 en bien specifiant l'IP de chacun des noeuds dans la variable ansible_host, comme dans l'exemple ci dessous:
+Ajouter  node1, node2 and node3 en bien specifiant l'IP de chacun des hotes dans la variable ansible_host, comme dans l'exemple ci dessous:
 
 ![Create host](images/create_host.png) 
 
+
+A la fin, cliquer sur **RESSOURCES → Inventaires → Workshop Inventory** et **hotes** , verifier que les 3 hotes sont présents :
+
+![hosts_added](images/3nodes_added.png) 
+
+
+
 ###  Machine informations d identification
 
-Pour que Tower puisse executer des actions sur des noeuds distants, il faut configurer des informations d'identification (mot de passe, clé SSH, ...)
+Pour que Tower puisse executer des actions sur des hotes distants, il faut configurer des informations d'identification (mot de passe, clé SSH, ...)
 Une des fonctionalités les plus importantes de Tower est de pouvoir stocker et utiliser ces credeninformations , sans les rendre visibles. 
 
 > **Tip**
 >
 > Les Credentials sont definis de maniere independantes et non pas directement  attachés à un Hote ou un Inventaire. 
 
-Pour tester l'acces aux noeuds managés :
+Pour tester l'acces aux hotes managés :
 
 * Utiliser  code-server et ouvrir un terminal (il fonctionne par defaut sur le noeud Tower node)
 * Se connecter en SSH avec l'utilisateur  ec2-user  sur node1 (ou node 2 ou node3)et executer sudo -i.
@@ -101,9 +108,9 @@ En resumé ?`
 
 ## Configurer des informations d identification
 
-Maintenant, nous allons configurerdes informations d identification pour que Tower puisse acceder a nos noeuds managés :
+Maintenant, nous allons configurerdes informations d identification pour que Tower puisse acceder a nos hotes managés :
 
-* Depuis l'interface Tower, dans le menu RESOURCES, choisir 'informations d identification".
+* Depuis l'interface Tower, dans le menu **RESOURCES**, choisir **informations d identification**
 * Cliquer  sur le bouton '+' 
 
 * Remplir les champs :
@@ -131,7 +138,7 @@ MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
 * Copier cette clé (bieen inclure les lignes “BEGIN” et “END” ) et la copier dans le champs "Clé privée SSH" de l'interface Tower.
 * Sauvegarder
 
-Revenir sur RESOURCES -> informations d identification -> Workshop Credentials et constateerr que la clé SSH n'est plus visible.
+Revenir sur **RESOURCES** -> **informations d identification -> Workshop Credentials** et constater que la clé SSH n'est plus visible.
 
 Vous avez configurer des informations d'identification qui seront utilisés dans les exercices suivants.
 

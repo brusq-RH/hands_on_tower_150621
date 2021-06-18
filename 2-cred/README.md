@@ -28,7 +28,7 @@ Explore and understand the lab environment.  This exercise will cover
 
 ### Create an Inventory
 
-Let’s get started with: The first thing we need is an inventory of your managed hosts. This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let’s start with the basics.
+The first thing we need is an inventory of your managed hosts. This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let’s start with the basics.
 
 You should already have the web UI open, if not: Point your browser to the URL you were given, similar to 
 
@@ -38,12 +38,12 @@ replace `<N>` and `<LABID>` and log in as admin with the password given on the l
 
 Create the inventory:
 
-* In the web UI menu on the left side, go to RESOURCES → Inventories, click the plus button on the right side and choose Inventory.
+* In the web UI menu on the left side, go to **RESOURCES → Inventories**, click the plus button on the right side and choose **Inventory**.
 * NAME: Workshop Inventory
 * ORGANIZATION: Default
 * Click SAVE
 
-Go back to the Inventories list. Open the Workshop Inventory and click the HOSTS button, the list will be empty since we have not added any hosts yet.
+Go back to the Inventories list. Open the Workshop Inventory and click the **HOSTS** button, the list will be empty since we have not added any hosts yet.
 
 So let’s add some hosts. First we need to have the list of all managed hosts which are accessible to you within this lab. These can be found in an Ansible inventory file on the Tower node, it was created during deployment of the environment.
 
@@ -76,6 +76,12 @@ Add the  node1, node2 and node3  using the right ansible_host variable as shown 
 ![Create host](images/create_host.png) 
 
 
+At then end, clock on **RESOURCES → Inventories → Workshop Inventory** et **Hosts** , check the 3 nodes have well been added :
+
+![hosts_added](images/3nodes_added.png) 
+
+
+
 
 ###  Machine Credentials
 
@@ -106,7 +112,7 @@ What does this mean?`
 * User ec2-user can execute commands on the managed hosts as root with sudo.
 
 ###  Configure Machine Credentials
-Now we will configure the credentials to access our managed hosts from Tower. In the RESOURCES menu choose Credentials. Now:
+Now we will configure the credentials to access our managed hosts from Tower. In the **RESOURCES** menu choose **Credentials**. Now:
 
 Click the '+' button to add new credentials
 
@@ -136,7 +142,7 @@ MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
 * Copy the complete private key (including “BEGIN” and “END” lines) and paste it into the SSH PRIVATE KEY field in the web UI.
 * Click SAVE
 
-Go back to the RESOURCES -> Credentials -> Workshop Credentials and note that the SSH key is not visible.
+Go back to the **RESOURCES -> Credentials -> Workshop Credentials** and note that the SSH key is not visible.
 
 You have now setup credentials to use later for your inventory hosts.
 

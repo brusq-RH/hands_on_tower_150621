@@ -18,14 +18,14 @@
 Explorez et comprenez l'environnement du laboratoire. Cet exercice couvrira
 - Localisation et compréhension:
   - Tour Ansible [**Inventaire**](https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html)
-  - Tour Ansible [**Informations d'identification **](https://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html)
+  - Tour Ansible [**Informations d'identification**](https://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html)
 - Exécution de commandes ad hoc via l'interface utilisateur Web d'Ansible Tower
 
 # Guide
 
 ## Creer un inventaire
 
-La première chose dont nous avons besoin est un inventaire de vos hôtes gérés. C'est l'équivalent d'un fichier d'inventaire dans Ansible Engine. Il y en a beaucoup plus (comme les inventaires dynamiques), mais commençons par les bases.
+La première chose dont nous avons besoin est un inventaire de vos hôtes. C'est l'équivalent d'un fichier d'inventaire dans Ansible Engine. Il y a plusieurs possibilités pour définir un inventaire dans Tower (comme les inventaires dynamiques), mais commençons par les bases.
 
 Vous devriez déjà avoir l'interface utilisateur Web ouverte, sinon ouvrir :
 
@@ -34,16 +34,16 @@ Vous devriez déjà avoir l'interface utilisateur Web ouverte, sinon ouvrir :
 (remplacez `<N>` avec votre numéro d'étudiant et `<LABID>` avec le nom de votre atelier actuel) et connectez-vous en tant qu'"admin" avec le mot de passe fournit sur la page d'accueil.
 
 Creer l'inventaire:
-* Dans Tower, cliquer sur  **RESOURCES** → **Inventaires**
+* Dans Tower, cliquer sur  **RESSOURCES** → **Inventaires**
 * Cliquer sur le bouton '+' et **Inventaire**
 * Remplir le champs 'NOM' : Workshop Inventory
-* Remplir le champs 'ORGANIZATION' : Default
-* Sauvegarder
+* Remplir le champs 'ORGANISATION' : Default
+* ENREGISTRER
 
 
-Revenir sur la liste des inventaires. Ouvrir 'Workshop Inventory' et cliquer  sur **HOTES**, la liste est vide car nous n'avons pas encore ajouter d'Hotes. 
+Revenir sur la liste des inventaires. Ouvrir 'Workshop Inventory' et cliquer  sur **HOTES**, la liste est vide car nous n'avons pas encore ajouté d'Hotes. 
 
-Rajoutons des Hotes. Tout d'abord, nous devons recuperer la liste des machines qui sont accessibles depuis votre lab.
+Rajoutons donc des Hotes. Tout d'abord, nous devons recupérer la liste des machines qui sont accessibles depuis votre lab.
 
 En utilisant l'interface code-server, ouvrez un terminal et ouvrir le contenu du fichier  ~/lab_inventory/hosts :
 
@@ -65,12 +65,12 @@ ansible ansible_host=11.22.33.44
 
 > **Warning**
 >
-> Les IPs de votre lab seront differentes
+> Les IPs de votre lab seront différentes
 
 
 Revenir sur l'interface Tower, cliquer sur le bouton '+'  :
 * NOM: node1
-* Dans le champs **variables**, add **ansible_host: x.x.x.x** en utilisant l'IP provenant dans votre fichier  ~/lab_inventory/hosts file
+* Dans le champs **variables**, ajoutr **ansible_host: x.x.x.x** en utilisant l'IP provenant dans votre fichier  ~/lab_inventory/hosts file
 * "Enregister" 
 * Fermer le menu d'édition de l'hote en cliquant sur l'icone 'x' en haut à droite
 
@@ -80,7 +80,7 @@ Revenir sur l'interface Tower, cliquer sur le bouton '+'  :
 Répéter ces étapes pour ajouter les hotes node2 et node3.
 
 
-A la fin, cliquer sur  **RESSOURCES → Inventaires → Workshop Inventory** et **hotes**  , vérifier que les 3 hotes sont présents :
+A la fin, cliquer sur  **RESSOURCES → Inventaires → Workshop Inventory** et **HÔTES**  , vérifier que les 3 hotes sont présents :
 
 ![hosts_added](images/3nodes_added.png) 
 
@@ -90,16 +90,16 @@ A la fin, cliquer sur  **RESSOURCES → Inventaires → Workshop Inventory** et 
 ###  Machine informations d identification
 
 Pour que Tower puisse executer des actions sur des hotes distants, il faut configurer des informations d'identification (mot de passe, clé SSH, ...)
-Une des fonctionalités les plus importantes de Tower est de pouvoir stocker et utiliser ces credeninformations , sans les rendre visibles. 
+Une des fonctionalités les plus importantes de Tower est de pouvoir stocker et utiliser ces informations, sans les rendre visibles. 
 
 > **Tip**
 >
-> Les Credentials sont definis de maniere independantes et non pas directement  attachés à un Hote ou un Inventaire. 
+> Les informations d'identification sont definies de manière indépendantes et non pas directement attachées à un Hote ou un Inventaire. 
 
-Pour tester l'acces aux hotes managés :
+Pour tester l'accès aux hotes :
 
-* Utiliser  code-server et ouvrir un terminal (il fonctionne par defaut sur le noeud Tower node)
-* Se connecter en SSH avec l'utilisateur  ec2-user  sur node1 (ou node 2 ou node3)et executer sudo -i.
+* Utiliser code-server et ouvrir un terminal (il fonctionne par défaut sur le noeud Tower)
+* Se connecter en SSH avec l'utilisateur  ec2-user  sur node1 (ou node 2 ou node3) et executer sudo -i.
 
 ```bash
 [student1@ansible ~]$ ssh ec2-user@node1
@@ -109,28 +109,26 @@ sudo -i
 [ec2-user@node1 ~]$ exit
 ```
 
-En resumé ?`
+En resumé ?
 * L'utilisateur  `student<N>` peut se connecter en SSH sans mot de passe sur les machines en utilisant l'utilisateur ec2-user.
 * L'utilisateur ec2-user peut effectuer des commandes en tant que root via sudo, sans renseigner de mot de passe additionel.
 
 
 ## Configurer des informations d identification
 
-Maintenant, nous allons configurerdes informations d identification pour que Tower puisse acceder a nos hotes managés :
+Maintenant, nous allons configurer des informations d'identification pour que Tower puisse accéder à nos hotes :
 
-* Depuis l'interface Tower, dans le menu **RESOURCES**, choisir **informations d identification**
+* Depuis l'interface Tower, dans le menu **RESSOURCES**, choisir **informations d'identification**
 * Cliquer  sur le bouton '+' 
 
 * Remplir les champs :
  * NOM: Workshop Credentials
- * ORGANISATION: Click on the magnifying glass, pick Default and click SELECT
+ * ORGANISATION: Cliquer sur la loupe, et choisir **Default**
  * Type d'informations d’identification : Cliquer sur la loupe, et rechercher 'machine'. Cocher et valider en appuyant sur 'selectionner'
  * Nom d'utilisateur: ec2-user
  * Méthode d'escalade privilégiée: sudo
 
-Comme nous utilisons une identification par clé SSH, il faut fournir la clé SSH privée key 
-
-(On pourrait egalement utiliser une authentification par mot de passe) 
+Comme nous utilisons une identification par clé SSH, il faut fournir la clé SSH privée key  (On pourrait egalement utiliser une authentification par mot de passe).
 
 Se connecter au terminal code-server et ouvrir le fichier .ssh/aws-private.pem , qui contient la clé privée SSH  : 
 
@@ -143,17 +141,17 @@ MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
 ```
 
 
-* Copier cette clé (bieen inclure les lignes “BEGIN” et “END” ) et la copier dans le champs "Clé privée SSH" de l'interface Tower.
+* Copier cette clé (bien inclure les lignes “BEGIN” et “END” ) dans le champs "Clé privée SSH" de l'interface Tower.
 * Sauvegarder
 
-Revenir sur **RESOURCES** -> **informations d identification -> Workshop Credentials** et constater que la clé SSH n'est plus visible.
+Revenir sur **RESSOURCES** -> **Informations d'identification -> Workshop Credentials** et constater que la clé SSH n'est plus visible et est chiffrée.
 
-Vous avez configurer des informations d'identification qui seront utilisés dans les exercices suivants.
+Bravo ! Vous avez configuré des informations d'identification qui seront utilisées dans les exercices suivants.
 
 
 ## Exécution des commandes Ad hoc
 
-Il est également possible d'exécuter des commandes ad hoc à partir d'Ansible Tower.
+Il est possible d'exécuter des commandes ad hoc à partir d'Ansible Tower.
 
    - Dans l'interface utilisateur Web, accédez à **RESSOURCES → Inventaires → Workshop Inventory**
 
@@ -175,7 +173,7 @@ Il est également possible d'exécuter des commandes ad hoc à partir d'Ansible 
     </tr>
   </table>
 
-  - Click **LAUNCH**, and watch the output.
+  - Cliquer sur  **LANCER**, et observer les traces.
 
 <hr>
 
@@ -243,8 +241,8 @@ D'accord, un petit défi: exécutez un ad hoc pour vous assurer que le package "
     <th>Valeur</th>
   </tr>
   <tr>
+    <td>MODULE</td>
     <td>yum</td>
-    <td>command</td>
   </tr>
   <tr>
     <td>ARGUMENTS</td>

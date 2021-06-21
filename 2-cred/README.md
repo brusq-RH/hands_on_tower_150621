@@ -245,8 +245,8 @@ Okay, a small challenge: Run an ad hoc to make sure the package "tmux" is instal
     <th>Value</th>
   </tr>
   <tr>
+    <td>MODULE</td>
     <td>yum</td>
-    <td>command</td>
   </tr>
   <tr>
     <td>ARGUMENTS</td>

@@ -6,7 +6,7 @@
 
 Ansible est un moteur d'automatisation informatique simple mais puissant pour le déploiement d'applications, la gestion de la configuration et l'orchestration que vous pouvez apprendre rapidement.
 
-Ce Hands-on couvre Tower et donne à l'utilisateur un aperçu de ce qu'est Tower, de son fonctionnement et de ses avantages.
+Ce Hands-on couvre Ansible Tower et donne à l'utilisateur un aperçu de ce qu'est Ansible Tower, de son fonctionnement et de ses avantages.
 
 
 ## Présentations
@@ -21,8 +21,7 @@ Jetez également un œil à notre plate-forme des meilleures pratiques Ansible:
 
 ## Planification du temps
 
-
-Le temps requis pour faire les ateliers dépend fortement de plusieurs facteurs: le nombre de participants, leur familiarité avec Linux en général et le nombre de discussions qui se font entre les deux.
+Le temps requis pour faire les ateliers dépend fortement de plusieurs facteurs: le nombre de participants, leur familiarité avec Linux en général et Ansible, ainsi que le nombre de discussions et d'interactions avec les instructeurs.
 
 ##  Lab architecture
 

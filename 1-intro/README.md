@@ -55,12 +55,12 @@ Some hints to get you started:
 
 * Don’t type everything manually, use copy & paste from the browser when appropriate. But don’t stop to think and understand… ;-)
 
-* To edit files or open a terminal window, we provide code-server, basically the great VSCode Editor running in your browser. It’s running on the Tower node.
+* To edit files or open a terminal window, we provide **code-server**, basically the great VSCode Editor running in your browser. It’s running on the **Tower node**.
    
 
 ### Accessing VScode Lab Environment
 
-Your main points of contact with the lab is the Ansible Tower web UI and code-server, providing a VSCode-experience in your browser.
+Your main points of contact with the lab is the **Ansible Tower web UI** and **code-server**, providing a VSCode-experience in your browser.
 
 Now open code-server using the link from the lab landing page or this link in your browser by replacing `<N>` by your student number and the `<LABID>`:
 

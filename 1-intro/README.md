@@ -68,7 +68,7 @@ Now open code-server using the link from the lab landing page or this link in yo
 
 ![VS code PWD](images/vscode-pwd.png)
 
-Use the password provided on the lab landing page to login into the code-server web UI, you can close the Welcome tab. Now open a new terminal by heading to the menu item Terminal at the top of the page and select New Terminal. A new section will appear in the lower half of the screen and you will be greeted with a prompt:
+Use the password provided on the lab landing page to login into the code-server web UI, you can close the Welcome tab. Now open a new terminal by heading to the menu item **Terminal** at the top of the page and select **New Terminal**. A new section will appear in the lower half of the screen and you will be greeted with a prompt:
 
 ![VS code terminal](images/vscode-terminal.png)
 

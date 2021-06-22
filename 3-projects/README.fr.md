@@ -15,10 +15,10 @@
 
 # Objectif
 
-Un projet Ansible Tower est une collection logique de Playbooks Ansible. Vous pouvez gérer vos playbooks en les plaçant dans un système de gestion de code source (SCM) pris en charge par Tower, y compris Git, Subversion et Mercurial.
+Un projet Ansible Tower est une collection logique de Playbooks Ansible. Vous pouvez gérer vos playbooks en les plaçant dans un système de gestion de code source (SCM) pris en charge par Tower, comme Git, Subversion et Mercurial.
 
 Cet exercice couvre
-- Comprendre et utiliser un projet de tour Ansible
+- Comprendre et utiliser un projet Ansible Tower
 - Utilisation de Playbooks Ansible conservés dans un référentiel Git.
 - Création et utilisation d'un modèle de travail Ansible
 
@@ -126,7 +126,7 @@ Vous avez maintenant besoin de l'URL pour accéder au dépôt. Accédez au réf�
 
 - Cliquez sur **ENREGISTRER**
 
-Le nouveau projet sera synchronisé automatiquement après sa création. Mais vous pouvez également le faire manuellement: Synchronisez à nouveau le projet avec le référentiel Git en accédant à la vue **Projets** et en cliquant sur la flèche circulaire **Icône Obtenir la dernière révision SCM** à droite du projet.
+Le nouveau projet sera synchronisé automatiquement après sa création. Mais vous pouvez également le faire manuellement: Synchronisez à nouveau le projet avec le référentiel Git en accédant à la vue **Projets** et en cliquant sur la flèche circulaire **Obtenir la dernière révision SCM** à droite du projet.
 
 Après avoir démarré le job de synchronisation, accédez à la vue **Taches**: il y a un nouveau job pour la mise à jour du référentiel Git.
 
@@ -205,7 +205,7 @@ Une fois le travail terminé, accédez à la vue principale **Taches**: tous les
 
 Il est temps de relever un petit défi:
 
-  - Utilisez une commande Ad-hoc sur les deux hôtes pour vous assurer qu'Apache a été installé et fonctionne.
+  - Utilisez une commande Ad-hoc sur les  hôtes pour vous assurer qu'Apache a été installé et fonctionne.
 
 Vous avez déjà franchi toutes les étapes nécessaires, essayez donc par vous-même.
 

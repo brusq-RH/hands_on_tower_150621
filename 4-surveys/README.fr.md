@@ -16,7 +16,9 @@
 
 # Objectif
 
-Démontrez l'utilisation des [questionnaires](https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html#surveys) dans Ansible Tower. Les questionnaires définissent des variables supplémentaires pour le playbook, comme le fait de «Demander des variables supplémentaires», mais de manière conviviale par questions et réponses. Les questionnaires permettent également de valider les entrées des utilisateurs.
+Démontrez l'utilisation des [questionnaires](https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html#surveys) dans Ansible Tower. 
+
+Les questionnaires permettent de definir des variables supplémentaires pour le playbook de manière conviviale par des questions et réponses. Les questionnaires permettent également de valider les entrées des utilisateurs.
 
 # Guide
 
@@ -32,7 +34,7 @@ De plus, le rôle s'assurera également que la configuration d'Apache est correc
 
 > **Astuce**
 >
-> La fonction de questionnaire ne fournit qu'une simple requête de données - elle ne prend pas en charge les principes à quatre yeux, les requêtes basées sur des données dynamiques ou des menus imbriqués.
+> La fonction de questionnaire ne fournit qu'une simple requête de données - elle ne prend pas en charge les requêtes basées sur des données dynamiques ou des menus imbriqués.
 
 ## Utilisation d un rôle externe
 
@@ -51,7 +53,7 @@ Le rôle déploie également une configuration statique pour Apache. Il s'agit d
 
 ## Création d un questionnaire
 
-Vous créez maintenant un nouveau modèle qui inclut un forulaire.
+Vous créez maintenant un nouveau modèle qui inclut un formulaire.
 
 ### Création d un modèle
 
@@ -137,11 +139,11 @@ Essayez par vous-même, la solution est ci-dessous.
   </tr>
   <tr>
     <td>TYPE DE REPONSE</td>
-    <td>Text</td>
+    <td>Texte</td>
   </tr>         
 </table>
 
-- Cliquez sur **+AJOUTER**
+- Cliquez sur **+Add**
 
 - De la même manière, ajoutez une deuxième **Invite de questionnaire**
 
@@ -160,11 +162,11 @@ Essayez par vous-même, la solution est ci-dessous.
   </tr>
   <tr>
     <td>TYPE DE REPONSE</td>
-    <td>Text</td>
+    <td>Texte</td>
   </tr>         
 </table>
 
-- Cliquez sur **+ AJOUTER**
+- Cliquez sur **+Add**
 
 - Cliquez sur **ENREGISTRER** pour l'enquête
 
@@ -172,7 +174,7 @@ Essayez par vous-même, la solution est ci-dessous.
 
 ## Lancer le modèle
 
-Lancez maintenant **Créer un modèle de travail index.html**.
+Lancez maintenant **Créer index.html**.
 
 Avant le lancement, le questionnaire demandera les valeurs des **First Line** et **Second Line**. Remplissez les champs et cliquez sur **Suivant**. La fenêtre suivante affiche les valeurs, si tout va bien, exécutez la tache en cliquant sur **Lancer**.
 

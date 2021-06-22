@@ -15,7 +15,7 @@
 
 # Objectif
 
-L'idée de base d'un flux de travail est de lier plusieurs modèles de travail ensemble. Ils peuvent ou non partager l'inventaire, les Playbooks ou même les autorisations. Les liens peuvent être conditionnels:
+L'idée de base d'un Workflow est de lier plusieurs modèles de travail ensemble. Ils peuvent ou non partager l'inventaire, les Playbooks ou même les autorisations. Les liens peuvent être conditionnels:
 
   - si le modèle de travail A réussit, le modèle de travail B est automatiquement exécuté par la suite
 
@@ -29,13 +29,13 @@ Dans ce laboratoire, vous apprendrez à configurer un flux de travail.
 
 # Guide
 
-## Scénario de l atelier
+## Scénario de l'atelier
 
 Vous avez deux départements dans votre organisation:
 
   - L'équipe des opérations Web qui développe des Playbooks dans leur propre référentiel Git.
 
-  - L'équipe d'applications Web, qui développe des applications Web JSP pour Tomcat aussi dans leur référentiel Git.
+  - L'équipe d'applications Web, qui développe des applications Web JSP pour Tomcat aussi dans leur propre référentiel Git.
 
 Lorsqu'il y a un nouveau serveur Tomcat à déployer, deux choses doivent se produire:
 
@@ -73,20 +73,20 @@ Créez le projet pour les opérations Web. Dans la vue **Projets **, cliquez sur
     <td>Default</td>
   </tr>
   <tr>
-    <td>SCM TYPE</td>
+    <td>TYPE de SCM</td>
     <td>Git</td>
   </tr>  
   <tr>
-    <td>SCM URL</td>
+    <td>URL DU SCM</td>
     <td><code>https://github.com/ansible/workshop-examples.git</code></td>
   </tr>
   <tr>
-    <td>SCM BRANCH/TAG/COMMIT</td>
+    <td>BRANCHE SCM/BALISE/VALIDATION	</td>
     <td><code>webops_summit_2020</code></td>
   </tr>  
   <tr>
-    <td>SCM UPDATE OPTIONS</td>
-    <td>Tick all three boxes.</td>
+    <td>OPTIONS DE MISE A JOUR SCM	</td>
+    <td>Cocher les 3 premieres cases.</td>
   </tr>                    
 </table>  
 
@@ -110,20 +110,20 @@ Créez le projet pour les développeurs d'applications. Dans la vue **Projets** 
     <td>Default</td>
   </tr>
   <tr>
-    <td>SCM TYPE</td>
+    <td>TYPE DE SCM </td>
     <td>Git</td>
   </tr>  
   <tr>
-    <td>SCM URL</td>
+    <td>URL DU SCM</td>
     <td><code>https://github.com/ansible/workshop-examples.git</code></td>
   </tr>
   <tr>
-    <td>SCM BRANCH/TAG/COMMIT</td>
+    <td>BRANCHE SCM/BALISE/VALIDATION	</td>
     <td><code>webdev_summit_2020</code></td>
   </tr>
   <tr>
-    <td>SCM UPDATE OPTIONS</td>
-    <td>Tick all three boxes.</td>
+    <td>OPTIONS DE MISE A JOUR SCM	</td>
+    <td>Cocher les 3 premieres cases.</td>
   </tr>             
 </table>
 
@@ -147,7 +147,7 @@ Utilisez les valeurs suivantes:
     </tr>
     <tr>
       <td>TYPE DE TACHE</td>
-      <td>Run</td>
+      <td>Executer</td>
     </tr>
     <tr>
       <td>INVENTAIRE</td>
@@ -159,7 +159,7 @@ Utilisez les valeurs suivantes:
     </tr>
     <tr>
       <td>PLAYBOOK</td>
-      <td><code>rhel/webops/tomcat.yml</code></td>
+      <td><code>rhel/webops/web_infrastructure.yml</code></td>
     </tr>
     <tr>
       <td>CREDENTIAL</td>
@@ -184,12 +184,12 @@ Utilisez les valeurs suivantes:
       <th>Valeur</th>
     </tr>
     <tr>
-      <td>NOME</td>
+      <td>NOM</td>
       <td>Web App Deploy</td>
     </tr>
     <tr>
       <td>TYPE DE TACHE</td>
-      <td>Run</td>
+      <td>Executer</td>
     </tr>
     <tr>
       <td>INVENTAIRE</td>
@@ -201,7 +201,7 @@ Utilisez les valeurs suivantes:
     </tr>
     <tr>
       <td>PLAYBOOK</td>
-      <td><code>rhel/webdev/create_jsp.yml</code></td>
+      <td><code>rhel/webdev/install_node_app.yml</code></td>
     </tr>
     <tr>
       <td>CREDENTIAL</td>
@@ -221,7 +221,7 @@ Utilisez les valeurs suivantes:
 
 ## Configuration du workflow
 
-Et maintenant, vous allez enfin configuré le workflow. Les flux de travail sont configurés dans la vue **Modèles**, vous avez peut-être remarqué que vous pouvez choisir entre **Modèle de Tache** et **Modèle de workflow** lors de l'ajout d'un modèle, ce qui est finalement logique.
+Et maintenant, vous allez enfin configurer le workflow. Les Workflow sont configurés dans la vue **Modèles**, vous avez peut-être remarqué que vous pouvez choisir entre **Modèle de Tache** et **Modèle de workflow** lors de l'ajout d'un modèle, ce qui est finalement logique.
 
   - Accédez à la vue **Modèles** et cliquez sur le bouton plus vert. Cette fois, choisissez **Modèle de workflow**
 
@@ -253,11 +253,9 @@ Et maintenant, vous allez enfin configuré le workflow. Les flux de travail sont
 >
 > Le type permet des workflows plus complexes. Vous pouvez définir différents chemins d'exécution pour les exécutions réussies et les échecs du Playbook.
 
-  - Cliquez sur **SELECTIONNER**
-
   - Cliquez sur **ENREGISTRER** dans la vue **VISUALISATEUR DE WORKFLOW**
 
-  - Cliquez sur **ENREGISTRER** dans la vue **Modèle de workflow**
+  - Cliquez sur **ENREGISTRER** dans la vue **Modèle** 
 
 > **Astuce**
 >
@@ -271,11 +269,12 @@ Votre workflow est prêt à démarrer, lancez-le.
 
 ![vue des tâches du workflow](images/job_workflow.png)
 
-Notez comment l'exécution du flux de travail est affichée dans la vue des travaux. Contrairement à l'exécution normale d'un travail de modèle de travail cette fois, il n'y a pas de sortie de playbook à droite, mais une représentation visuelle des différentes étapes du flux de travail. Si vous souhaitez consulter les playbooks réels derrière cela, cliquez sur **DÉTAILS** à chaque étape. Si vous souhaitez revenir d'une vue détaillée au flux de travail correspondant, cliquez sur le bouton ![W-bouton](images/w_button.png) dans la ligne **Tâches** de la partie **DETAILS** à gauche côté de l'aperçu de l'emploi.
+Notez comment l'exécution du flux de travail est affichée dans la vue des taches. Contrairement à l'exécution normale d'un travail de modèle de travail cette fois, il n'y a pas de sortie de playbook à droite, mais une représentation visuelle des différentes étapes du flux de travail. Si vous souhaitez consulter les playbooks réels derrière cela, cliquez sur **DÉTAILS** à chaque étape. Si vous souhaitez revenir d'une vue détaillée au flux de travail correspondant, cliquez sur le bouton ![W-bouton](images/w_button.png) dans la ligne **Tâches** de la partie **DETAILS** à gauche côté de l'aperçu de l'emploi.
 
-Une fois le travail terminé, vérifiez si tout a bien fonctionné: connectez-vous à `node1`, `node2` ou `node3` à partir de votre hôte de contrôle et exécutez:
+Une fois le travail terminé, vérifiez si tout a bien fonctionné: 
+
 ```bash
-$ curl http://localhost:8080/coolapp/
+$ curl http://node1/nodejs
 ```
 
 > **Astuce**

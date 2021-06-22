@@ -283,10 +283,10 @@ Note how the workflow run is shown in the job view. In contrast to a normal job 
 
 ![jobs view of workflow](images/job_workflow.png)
 
-After the job was finished, check if everything worked fine: log into `node1`, `node2` or `node3` from your control host and run:
+After the job was finished, check if everything worked fine: 
 
 ```bash
-#> curl http://localhost/nodejs
+#> curl http://node1/nodejs
 ```
 
 You can also execute curl on the control host, pointing it towards the nodes and query the `nodejs` path, it should also show the simple nodejs application.

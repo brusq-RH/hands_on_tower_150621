@@ -14,7 +14,7 @@
 
 # Objectif
 
-Vous avez déjà appris comment Ansible Tower sépare les informations d'identification des utilisateurs. Un autre avantage d'Ansible Tower est la gestion des droits des utilisateurs et des groupes. Cet exercice montre le contrôle d'accès basé sur les rôles (RBAC)
+Vous avez déjà appris comment Ansible Tower sépare les informations d'identification des utilisateurs. Un autre avantage d'Ansible Tower est la gestion des droits des utilisateurs et des equipes. Cet exercice montre le contrôle d'accès basé sur les rôles (RBAC)
 
 # Guide
 
@@ -41,15 +41,15 @@ Créons un utilisateur:
     <th>Valeur</th>
   </tr>
   <tr>
-    <td>FIRST NAME </td>
+    <td>PRENOM </td>
     <td>Werner</td>
   </tr>
   <tr>
-    <td>LAST NAME</td>
+    <td>NOM</td>
     <td>Web</td>
   </tr>
   <tr>
-    <td>Organization</td>
+    <td>Organisation</td>
     <td>Default</td>
   </tr>         
   <tr>
@@ -57,27 +57,22 @@ Créons un utilisateur:
     <td>wweb@example.com</td>
   </tr>
   <tr>
-    <td>USERNAME</td>
+    <td>NOM D'UTILILSATEUR</td>
     <td>wweb</td>
   </tr>  
   <tr>
-    <td>PASSWORD</td>
+    <td>MOT DE PASSE</td>
     <td>ansible</td>
   </tr>
   <tr>
-    <td>CONFIRM PASSWORD</td>
+    <td>CONFIRMER LE MOT DE PASSE</td>
     <td>ansible</td>
   </tr>
   <tr>
-    <td>USER TYPE</td>
+    <td>TYPE D'UTILISATEUR</td>
     <td>Normal User</td>
   </tr>                           
 </table>
-
-
-
-
- - Confirmez le mot de passe
 
 - Cliquez sur **ENREGISTRER**
 
@@ -113,13 +108,13 @@ Ajoutez l'autorisation d'utiliser le modèle:
 
 - Une nouvelle fenêtre s'ouvre. Vous pouvez choisir de définir des autorisations pour un certain nombre de ressources.
 
-    - Sélectionnez le type de ressource **MODÈLES**
+    - Sélectionnez le type de ressource **MODÈLES DE TACHES**
 
     - Choisissez le modèle `Create index.html` en cochant la case à côté.
 
 - La deuxième partie de la fenêtre s'ouvre, vous attribuez ici des rôles à la ressource sélectionnée.
 
-    - Choisissez **EXECUTER**
+    - Choisissez **EXECUTION**
 
 - Cliquez sur **ENREGISTRER**
 

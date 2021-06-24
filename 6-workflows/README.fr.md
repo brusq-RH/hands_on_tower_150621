@@ -197,7 +197,7 @@ Utilisez les valeurs suivantes:
     </tr>  
     <tr>
       <td>PROJET</td>
-      <td>Webops Git Repo</td>
+      <td>Webdev Git Repo</td>
     </tr>
     <tr>
       <td>PLAYBOOK</td>

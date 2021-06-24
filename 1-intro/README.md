@@ -64,7 +64,7 @@ Your main points of contact with the lab is the **Ansible Tower web UI** and **c
 
 Now open code-server using the link from the lab landing page or this link in your browser by replacing `<N>` by your student number and the `<LABID>`:
 
-    https://student<N>-code.<LABID>.events.opentlc.com
+    https://student<N>-code.<LABID>.example.opentlc.com
 
 ![VS code PWD](images/vscode-pwd.png)
 
@@ -81,7 +81,7 @@ Let's have a first look at the Tower !
 
 Point your browser to the URL you were given, similar to :
 
-    https://student<N>.<LABID>.events.opentlc.com
+    https://student<N>.<LABID>.example.opentlc.com
 
 (replace `<N>` with your student number and `<LABID>` with the ID of this lab) and log in as admin. You can find the password again on the lab landing page.
 

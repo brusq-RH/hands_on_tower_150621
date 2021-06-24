@@ -29,7 +29,7 @@ La première chose dont nous avons besoin est un inventaire de vos hôtes. C'est
 
 Vous devriez déjà avoir l'interface utilisateur Web ouverte, sinon ouvrir :
 
-    https://student<N>.<LABID>.events.opentlc.com
+    https://student<N>.<LABID>.examplee.opentlc.com
 
 (remplacez `<N>` avec votre numéro d'étudiant et `<LABID>` avec le nom de votre atelier actuel) et connectez-vous en tant qu'"admin" avec le mot de passe fournit sur la page d'accueil.
 
